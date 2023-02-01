@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 
 import { rootReducer } from './root-reducer'
 
-const middleWares = [process.env.NODE_ENV === 'development' && logger, thunk].filter(Boolean)
+const middleWares = [process.env.NODE_ENV === 'production' && logger, thunk].filter(Boolean)
 
 const persistConfig = {
 	key: root,
